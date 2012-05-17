@@ -136,5 +136,7 @@ for DIR in $CACHED_DIRS ; do
   if [ -d $DIR ] ; then
     cp -r $DIR/.  $CACHE_DIR/$DIR
   fi
+  echo "-----> Dropping ivy cache from the slug: $DIR"
+  rm -rf $SBT_USER_HOME/.ivy2
 done
 
